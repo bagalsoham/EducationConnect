@@ -1,22 +1,25 @@
 import { Tabs } from "expo-router";
 import { Ionicons, AntDesign } from "@expo/vector-icons";
+import "../../i18n";
+import { useTranslation } from "react-i18next";
 
 export default function Layout() {
+  const { t } = useTranslation();
   return (
     <Tabs
       screenOptions={{
         tabBarActiveTintColor: "#007AFF",
         tabBarInactiveTintColor: "gray",
-        tabBarStyle: { 
-          backgroundColor: "#FFF", 
-          paddingBottom: 5, 
-          height: 60, 
-          borderTopWidth: 1, 
-          borderTopColor: "#E0E0E0" 
+        tabBarStyle: {
+          backgroundColor: "#FFF",
+          paddingBottom: 5,
+          height: 60,
+          borderTopWidth: 1,
+          borderTopColor: "#E0E0E0",
         },
-        tabBarLabelStyle: { 
-          fontSize: 12, 
-          fontWeight: "500" 
+        tabBarLabelStyle: {
+          fontSize: 12,
+          fontWeight: "500",
         },
         headerShown: false, // Hide header globally for all screens
       }}
@@ -38,7 +41,11 @@ export default function Layout() {
         options={{
           title: "Chat",
           tabBarIcon: ({ color }) => (
-            <Ionicons name="chatbubble-ellipses-outline" size={24} color={color} />
+            <Ionicons
+              name="chatbubble-ellipses-outline"
+              size={24}
+              color={color}
+            />
           ),
         }}
       />

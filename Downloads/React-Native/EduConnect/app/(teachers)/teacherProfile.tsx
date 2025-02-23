@@ -1,39 +1,59 @@
 import React from "react";
 import { View, Text, Image, StyleSheet, TouchableOpacity } from "react-native";
 import { Entypo } from "@expo/vector-icons"; // For the three-dot menu
+import "../../i18n";
+import { useTranslation } from "react-i18next";
 
 const TeacherProfile = () => {
+  const { t } = useTranslation("common");
+
   return (
     <View style={styles.container}>
       {/* Header */}
       <View style={styles.header}>
-        <Image source={{ uri: "https://via.placeholder.com/150" }} style={styles.logo} />
+        <Image
+          source={{ uri: "https://via.placeholder.com/150" }}
+          style={styles.logo}
+        />
         <View style={styles.languageContainer}>
-          <Text style={styles.languageText}>EN</Text>
-          <Image source={{ uri: "https://upload.wikimedia.org/wikipedia/en/a/a4/Flag_of_the_United_Kingdom.svg" }} style={styles.flag} />
+          <Text style={styles.languageText}>{t("EN")}</Text>
+          <Image
+            source={{
+              uri: "https://upload.wikimedia.org/wikipedia/en/a/a4/Flag_of_the_United_Kingdom.svg",
+            }}
+            style={styles.flag}
+          />
         </View>
       </View>
 
       {/* Teacher Profile Card */}
       <View style={styles.card}>
         <View style={styles.row}>
-          <Image source={{ uri: "https://via.placeholder.com/80" }} style={styles.profileImage} />
+          <Image
+            source={{ uri: "https://via.placeholder.com/80" }}
+            style={styles.profileImage}
+          />
           <View style={styles.textContainer}>
-            <Text style={styles.teacherName}>Teacher Name</Text>
-            <Text style={styles.teacherId}>ID</Text>
+            <Text style={styles.teacherName}>{t("Teacher Name")}</Text>
+            <Text style={styles.teacherId}>{t("ID")}</Text>
           </View>
-          <Entypo name="dots-three-vertical" size={18} color="black" style={styles.menuIcon} />
+          <Entypo
+            name="dots-three-vertical"
+            size={18}
+            color="black"
+            style={styles.menuIcon}
+          />
         </View>
       </View>
 
       {/* Settings Options */}
       <TouchableOpacity style={styles.optionCard}>
-        <Text style={styles.optionTitle}>App language</Text>
-        <Text style={styles.optionText}>English</Text>
+        <Text style={styles.optionTitle}>{t("App language")}</Text>
+        <Text style={styles.optionText}>{t("English")}</Text>
       </TouchableOpacity>
 
       <TouchableOpacity style={styles.optionCard}>
-        <Text style={styles.optionTitle}>Contact Team Support</Text>
+        <Text style={styles.optionTitle}>{t("Contact Team Support")}</Text>
         <Text style={styles.optionText}>1800 - 123 - 123</Text>
       </TouchableOpacity>
     </View>

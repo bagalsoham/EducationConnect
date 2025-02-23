@@ -1,7 +1,16 @@
-import { View, Text, Image, FlatList, StyleSheet, TouchableOpacity } from "react-native";
+import {
+  View,
+  Text,
+  Image,
+  FlatList,
+  StyleSheet,
+  TouchableOpacity,
+} from "react-native";
 import React from "react";
 import { router } from "expo-router";
 import Header from "@/components/header";
+import "../../i18n";
+import { useTranslation } from "react-i18next";
 
 const teachers = [
   { id: "1", name: "Teacher A", subject: "Mathematics" },
@@ -11,6 +20,7 @@ const teachers = [
 ];
 
 const ContactTeachers = () => {
+  const { t } = useTranslation();
   return (
     <View style={styles.container}>
       <Header />
@@ -20,13 +30,21 @@ const ContactTeachers = () => {
         renderItem={({ item }) => (
           <TouchableOpacity
             style={styles.card}
-            onPress={() => router.push({ pathname: "/ChatPage", params: { id: item.id, name: item.name, subject: item.subject } })}
+            onPress={() =>
+              router.push({
+                pathname: "/ChatPage",
+                params: { id: item.id, name: item.name, subject: item.subject },
+              })
+            }
           >
-            <Image source={{ uri: "https://via.placeholder.com/80" }} style={styles.profileImage} />
+            <Image
+              source={{ uri: "https://via.placeholder.com/80" }}
+              style={styles.profileImage}
+            />
             <View style={styles.textContainer}>
               <Text style={styles.teacherName}>{item.name}</Text>
               <Text style={styles.subject}>{item.subject}</Text>
-              <Text style={styles.askForDoubts}>Ask For Doubts</Text>
+              <Text style={styles.askForDoubts}>{t("Ask For Doubts")}</Text>
             </View>
           </TouchableOpacity>
         )}
