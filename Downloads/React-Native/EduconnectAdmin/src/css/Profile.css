@@ -1,0 +1,84 @@
+/* Container for the profile page */
+.profile-container {
+  padding: 20px;
+  margin-top: 60px; /* To offset any fixed header */
+  font-family: Arial, sans-serif;
+}
+
+/* Header styling */
+.profile-header {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Profile information box */
+.profile-info {
+  background-color: #f7f7f7;
+  border: 1px solid #ddd;
+  padding: 15px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.profile-info p {
+  margin: 8px 0;
+  font-size: 18px;
+}
+
+/* Language toggle button styling */
+.language-toggle {
+  margin-bottom: 10px;
+}
+
+.language-button {
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.language-button:hover {
+  background-color: #45a049;
+}
+
+/* Language list styling */
+.language-list {
+  margin-top: 15px;
+}
+
+.language-list h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.language-list ul {
+  list-style: none;
+  padding: 0;
+}
+
+.language-list li {
+  display: inline-block;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+.language-list li button {
+  padding: 8px 12px;
+  background-color: #008cba;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.language-list li button:hover {
+  background-color: #007bb5;
+}

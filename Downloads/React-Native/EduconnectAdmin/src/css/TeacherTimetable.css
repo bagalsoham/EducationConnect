@@ -1,0 +1,29 @@
+/* TeacherTimetable.css */
+.teacher-timetable-container {
+  padding: 20px;
+  margin-top: 60px;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+.teacher-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.teacher-item {
+  background-color: #f7f7f7;
+  border: 1px solid #ddd;
+  padding: 15px 25px;
+  border-radius: 5px;
+  text-decoration: none;
+  color: #333;
+  transition: transform 0.3s ease;
+}
+
+.teacher-item:hover {
+  transform: scale(1.05);
+}

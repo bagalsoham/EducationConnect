@@ -1,0 +1,33 @@
+/* TimeTable.css */
+.timetable-container {
+  padding: 20px;
+  margin-top: 60px; /* Adjust if you have a fixed header */
+  font-family: Arial, sans-serif;
+}
+
+.timetable-container h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.timetable-boxes {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.timetable-box {
+  background-color: #f7f7f7;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 20px;
+  width: 250px;
+  text-align: center;
+  text-decoration: none;
+  color: #333;
+  transition: transform 0.3s ease;
+}
+
+.timetable-box:hover {
+  transform: scale(1.05);
+}

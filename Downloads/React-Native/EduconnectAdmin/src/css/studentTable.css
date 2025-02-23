@@ -1,0 +1,136 @@
+/* Container for the page */
+.student-table-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px; /* Increased overall padding */
+  font-family: sans-serif;
+  color: #333;
+}
+
+/* Top bar: includes back button, arrows, and STD info */
+.top-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 40px;
+  position: relative;
+  width: 100%;
+}
+
+/* Back button in top-left corner */
+.back-button {
+  position: absolute;
+  left: 0;
+  font-size: 18px;
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+
+.back-button:hover {
+  background-color: #ccc;
+}
+
+/* Arrows for next/previous STD */
+.arrow,
+.arrow-disabled {
+  font-size: 28px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+  padding: 0 10px;
+  cursor: pointer;
+}
+
+.arrow:hover {
+  color: #007bff;
+}
+
+.arrow-disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+/* Blue box with STD info */
+.std-info {
+  background-color: #dae8fc;
+  padding: 20px 40px; /* Larger padding */
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  position: relative;
+  width: 280px;
+}
+
+.std-name {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.std-divisions,
+.std-students {
+  font-size: 22px;
+  font-weight: bold;
+  padding: 5px;
+  padding-right: 10px;
+  padding-left: 30px;
+}
+
+/* Labels under the numeric data */
+.std-labels {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  position: absolute;
+  bottom: 8px;
+  left: 120px;
+  font-size: 14px;
+  color: #666;
+}
+
+/* Grid for division cards */
+.division-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px; /* Larger gap between cards */
+  width: 100%;
+  max-width: 1000px;
+  justify-content: center;
+}
+
+/* Each division card */
+.division-card {
+  background-color: #dae8fc;
+  padding: 20px; /* Larger padding */
+  border-radius: 8px;
+  text-align: center;
+  transition: box-shadow 0.2s ease;
+}
+
+.division-card:hover {
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Division card content */
+.division-name {
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.division-label {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 8px;
+}
+
+.division-count {
+  font-size: 18px;
+  font-weight: bold;
+}
