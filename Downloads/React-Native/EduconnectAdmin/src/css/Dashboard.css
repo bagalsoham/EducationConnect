@@ -1,0 +1,76 @@
+/* dashboard.css */
+
+/* Title Styling */
+.dashboard {
+  background-color: #f3f9ff;
+  padding: 7%;
+  text-decoration: none;
+}
+.dashboard-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  text-decoration: none;
+}
+
+/* Grid Layout for Dashboard Boxes (3 columns on large screens) */
+.dashboard-grid-3 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .dashboard-grid-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Grid Layout for Dashboard Boxes (2 columns on large screens) */
+.dashboard-grid-2 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .dashboard-grid-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Box Styles */
+.dashboard-box {
+  background-color: #d9ebfc;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Number Styling */
+.dashboard-number {
+  font-size: 2.25rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: #3b82f6;
+  text-decoration: none;
+}
+
+/* Label Styling */
+.dashboard-label {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #374151;
+  text-decoration: none;
+}
+
+/* Optional styling for collapsible panels (if needed) */
+.mt-6 {
+  margin-top: 1.5rem;
+}

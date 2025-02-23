@@ -1,0 +1,111 @@
+/* teachers.css */
+
+.teachers-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  font-family: sans-serif;
+  color: #333;
+}
+
+/* Top panel with total teachers */
+.top-panel {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.info-card {
+  background-color: #dae8fc; /* Light blue */
+  padding: 20px;
+  border-radius: 8px;
+  width: 250px;
+  text-align: center;
+}
+
+.info-card h2 {
+  margin: 0;
+}
+
+/* Controls for add & search */
+.controls {
+  width: 100%;
+  max-width: 800px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.controls button {
+  padding: 8px 16px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.controls input {
+  padding: 6px 10px;
+  font-size: 14px;
+  width: 200px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Add teacher form */
+.add-teacher-form {
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  padding: 15px;
+  margin-bottom: 20px;
+  width: 100%;
+  max-width: 500px;
+}
+
+.add-teacher-form h3 {
+  margin-top: 0;
+}
+
+.add-teacher-form label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+.add-teacher-form input {
+  margin-left: 10px;
+  padding: 4px 8px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  width: 100%;
+  max-width: 300px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.add-teacher-form button {
+  margin-right: 10px;
+  padding: 6px 12px;
+}
+
+/* Teachers table */
+.teachers-table {
+  width: 100%;
+  max-width: 800px;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.teachers-table thead {
+  background-color: #dae8fc;
+}
+
+.teachers-table th,
+.teachers-table td {
+  padding: 10px;
+  border: 1px solid #ccc;
+  text-align: left;
+}
+
+.teachers-table th {
+  font-weight: bold;
+}
