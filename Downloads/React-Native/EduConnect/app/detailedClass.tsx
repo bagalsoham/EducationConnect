@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
-import { View, Text, StyleSheet, TextInput, ScrollView } from 'react-native';
+import { View, Text, StyleSheet, TextInput, ScrollView, TouchableOpacity } from 'react-native';
 import Header from "@/components/header";
 import { FontAwesome } from '@expo/vector-icons';
 import { useRouter } from 'expo-router';
 
 const DetailedClass = () => {
   const [searchQuery, setSearchQuery] = useState('');
+  const router = useRouter();
 
   // Sample student data
   const students = Array(13).fill(null).map((_, index) => ({
@@ -13,7 +14,6 @@ const DetailedClass = () => {
     name: 'Student Name',
     number: 'Number'
   }));
-  const router = useRouter();
 
   return (
     <View style={styles.container}>
@@ -45,17 +45,15 @@ const DetailedClass = () => {
       {/* Student List */}
       <ScrollView style={styles.tableContainer}>
         {students.map((student, index) => (
-          <View 
+          <TouchableOpacity 
             key={index} 
-            style={[
-              styles.tableRow,
-              index === students.length - 1 && styles.lastRow
-            ]}
+            style={[styles.tableRow, index === students.length - 1 && styles.lastRow]}
+            onPress={() => router.push('/ChatTeacher')}
           >
             <Text style={styles.cell}>{student.rollNo}</Text>
             <Text style={[styles.cell, styles.nameCell]}>{student.name}</Text>
             <Text style={styles.cell}>{student.number}</Text>
-          </View>
+          </TouchableOpacity>
         ))}
       </ScrollView>
     </View>
