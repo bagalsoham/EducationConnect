@@ -10,7 +10,7 @@ const TeacherTimetable: React.FC = () => {
   return (
     <div className="teacher-timetable-container">
       <div className="top-bar">
-        {/* Back button: goes straight to Students.tsx */}
+        {/* Back button: goes straight to Students.tsx or any appropriate route */}
         <Link to="/timetable" className="back-button">
           &larr; Back
         </Link>

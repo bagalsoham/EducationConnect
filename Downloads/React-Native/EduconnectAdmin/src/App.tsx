@@ -11,11 +11,11 @@ import AvgAttendance from "./pages/AvgAttendance";
 import AvgGrades from "./pages/AvgGrades";
 import TimeTable from "./pages/TimeTable";
 import StudentTable from "./pages/StudentTable";
-import StudentDisplay from "./components/studentdisplay";
 import ClassTimetable from "./pages/ClassTimetable";
 import TeacherTimetable from "./pages/TeacherTimetable";
 import TeacherTimetableDetail from "./pages/TeacherTimetableDetail";
 import ClassTimetableDetail from "./pages/ClassTimetableDetail";
+import StudentDisplay from "./components/StudentDisplay";
 
 function App() {
   return (
@@ -32,10 +32,6 @@ function App() {
               <Route path="/" element={<Dashboard />} />
               <Route path="/students" element={<Students />} />
               <Route path="/student-table/:stdId" element={<StudentTable />} />
-              <Route
-                path="/student-display/:stdId/:divisionName"
-                element={<StudentDisplay />}
-              />
               <Route path="/events" element={<Events />} />
               <Route path="/profile" element={<Profile />} />
               <Route path="/teachers" element={<Teachers />} />
@@ -46,12 +42,16 @@ function App() {
               <Route path="/classtimetable" element={<ClassTimetable />} />
               <Route path="/teachertimetable" element={<TeacherTimetable />} />
               <Route
-                path="/teachertimetabledetail"
+                path="/teachertimetable/:teacherName"
                 element={<TeacherTimetableDetail />}
               />
               <Route
-                path="/classtimetabledetail"
+                path="/classtimetable/:classId"
                 element={<ClassTimetableDetail />}
+              />
+              <Route
+                path="/student-display/:std/:division"
+                element={<StudentDisplay />}
               />
             </Routes>
           </div>

@@ -26,11 +26,11 @@ const ClassTimetableDetail: React.FC = () => {
 
   return (
     <div className="class-timetable-detail">
+      <button onClick={() => navigate(-1)} className="back-button">
+        Back
+      </button>
       <h1>Timetable for Class {classId}</h1>
       <div className="search-back-container">
-        <button onClick={() => navigate(-1)} className="back-button">
-          Back
-        </button>
         <input
           type="text"
           placeholder="Search timetable..."

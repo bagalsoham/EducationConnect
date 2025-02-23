@@ -18,6 +18,7 @@
 }
 
 .back-button {
+  margin-left: 30px;
   padding: 8px 16px;
   background-color: #555;
   color: #fff;
@@ -35,6 +36,7 @@
   border: 1px solid #ddd;
   border-radius: 4px;
   width: 200px;
+  margin-left: 10%;
 }
 
 .timetable-table {

@@ -1,3 +1,4 @@
+// TeacherTimetableDetail.tsx
 import React, { useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import "../css/TecaherTimetableDetail.css";
@@ -8,11 +9,11 @@ const TeacherTimetableDetail: React.FC = () => {
 
   // Sample timetable data for the teacher
   const timetableData = [
-    { time: "9:00-10:00", class: "1A", subject: "Math" },
-    { time: "10:00-11:00", class: "2B", subject: "English" },
-    { time: "11:00-12:00", class: "3C", subject: "Science" },
-    { time: "12:00-1:00", class: "4D", subject: "History" },
-    { time: "1:00-2:00", class: "1A", subject: "Art" },
+    { time: "9:00-10:00", subject: "Math", class: "1A" },
+    { time: "10:00-11:00", subject: "English", class: "2B" },
+    { time: "11:00-12:00", subject: "Science", class: "3C" },
+    { time: "12:00-1:00", subject: "History", class: "4D" },
+    { time: "1:00-2:00", subject: "Art", class: "1A" },
   ];
 
   const [searchQuery, setSearchQuery] = useState("");
@@ -30,7 +31,7 @@ const TeacherTimetableDetail: React.FC = () => {
       <h1>Timetable for {teacherName}</h1>
       <div className="search-back-container">
         <button onClick={() => navigate(-1)} className="back-button">
-          Back
+          &larr; Back
         </button>
         <input
           type="text"
@@ -44,8 +45,8 @@ const TeacherTimetableDetail: React.FC = () => {
         <thead>
           <tr>
             <th>Time</th>
-            <th>Class</th>
             <th>Subject</th>
+            <th>Class</th>
           </tr>
         </thead>
         <tbody>
@@ -53,8 +54,8 @@ const TeacherTimetableDetail: React.FC = () => {
             filteredTimetable.map((entry, index) => (
               <tr key={index}>
                 <td>{entry.time}</td>
-                <td>{entry.class}</td>
                 <td>{entry.subject}</td>
+                <td>{entry.class}</td>
               </tr>
             ))
           ) : (
