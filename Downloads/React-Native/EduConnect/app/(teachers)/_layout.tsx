@@ -27,23 +27,23 @@ export default function Layout() {
         options={{
           title: "Dashboard",
           tabBarIcon: ({ color }) => (
-            <Ionicons name="grid-outline" size={24} color={color} /> // Grid icon for dashboard
+            <Ionicons name="grid-outline" size={24} color={color} />
           ),
         }}
       />
 
-      {/* Announcements Tab */}
+      {/* Messages Tab - Ensure there's only ONE messages tab */}
       <Tabs.Screen
-        name="contactTeachers"
+        name="messages" // Ensure this matches your actual screen file name
         options={{
-          title: "Chat",
+          title: "Messages",
           tabBarIcon: ({ color }) => (
             <Ionicons name="chatbubble-ellipses-outline" size={24} color={color} />
           ),
         }}
       />
 
-      {/* Chat Tab */}
+      {/* Event Tab */}
       <Tabs.Screen
         name="event"
         options={{
@@ -60,7 +60,7 @@ export default function Layout() {
         options={{
           title: "Profile",
           tabBarIcon: ({ color }) => (
-            <AntDesign name="user" size={24} color={color} /> // User profile icon
+            <AntDesign name="user" size={24} color={color} />
           ),
         }}
       />
